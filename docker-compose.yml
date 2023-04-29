@@ -20,7 +20,7 @@ services:
     restart: "always"
     env_file: .env
     environment:
-      - VIRTUAL_HOST=35.175.196.123, drbakhshaliyev.com, www.drbakhshaliyev.com
+      - VIRTUAL_HOST=3.95.227.131, drbakhshaliyev.com, www.drbakhshaliyev.com
       - VIRTUAL_PORT=8000
       - TIMEOUT=300
       - HTTP_PORT=8000
