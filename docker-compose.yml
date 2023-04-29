@@ -34,7 +34,15 @@ services:
     depends_on:
       - "postgres"
 
-networks:
-  default:
-    external:
-      name: nginx-proxy
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/example.com:/etc/nginx/sites-available/heart_project
+      - /etc/nginx/sites-enabled/
+      - /var/log/nginx:/var/log/nginx
+    depends_on:
+      - web
+    networks:
+      - nginx-proxy
